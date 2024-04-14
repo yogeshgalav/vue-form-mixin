@@ -4,8 +4,10 @@
 		"EMAIL": "The {attribute} must be a valid email address.",
 		"NUMERIC": "The {attribute} must be a number.",
 		"CONFIRMED": "The {attribute} confirmation does not match.",
+		"MIN": "The {attribute} length must be greater then {param1}",
 		"PHONERULE": "The {attribute} can contain only numbers and hyphen."
 	},
+	"SIGNUP":"Sign Up",
 	"FIRST_NAME":"First Name",
 	"LAST_NAME":"Last Name",
 	"EMAIL":"email",

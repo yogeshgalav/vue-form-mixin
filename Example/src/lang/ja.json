@@ -4,8 +4,10 @@
 		"EMAIL": "{attribute} は有効な電子メール アドレスである必要があります。",
 		"NUMERIC": "{attribute} は数値である必要があります。",
 		"CONFIRMED": "{attribute} の確認が一致しません。",
+		"MIN": "{attribute} の長さは {param1} より大きくなければなりません",
 		"PHONERULE": "{attribute} には数字とハイフンのみを含めることができます。"
 	},
+	"SIGNUP":"サインアップ",
 	"FIRST_NAME":"名",
 	"LAST_NAME":"姓",
 	"EMAIL":"電子メール",

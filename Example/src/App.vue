@@ -1,8 +1,23 @@
 <template>
-	<div class="min-h-screen flex items-center justify-center">
-		<div class="bg-white p-8 rounded-lg shadow-md ">
-			<h2 class="text-2xl font-semibold pb-6">Sign Up</h2>
-			<form class="w-full max-w-lg text-left" @submit.prevent="onSubmit">
+	<div class="min-h-screen items-center justify-center">
+		<div class="container mx-auto my-6 grid">
+			<ul class="flex justify-center space-x-2 text-white">
+				<li>
+					<button @click="currentTab('en')" class="border-b-2 focus:outline-none"
+					:class="locale=='en' ? 'border-blue-500 text-blue-500' : 'border-gray-500 text-gray-500'"
+					>English</button>
+				</li>
+				<li>
+					<button @click="currentTab('ja')" class="border-b-2 focus:outline-none"
+					:class="locale=='ja' ? 'border-blue-500 text-blue-500' : 'border-gray-500 text-gray-500'"
+					>日本語</button>
+				</li>
+			</ul>
+		</div>
+		<div clas="grid grid-cols-3">
+		<div class="bg-white p-8 rounded-lg shadow-md mx-auto">
+			<h2 class="text-2xl font-semibold pb-6">{{ $t('SIGNUP') }}</h2>
+			<form class=" text-left" @submit.prevent="onSubmit">
 				<div class="flex flex-wrap -mx-3 mb-6">
 					<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
 						<label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -83,13 +98,17 @@
 				</div>
 				
 				<button type="submit"
-					class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">Sign
-					Up</button>
+					class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">
+					{{ $t('SIGNUP') }}</button>
 			</form>
+		</div>
 		</div>
 	</div>
 </template>
 <script setup>
+import {useI18n} from 'vue-i18n';
+const { locale } = useI18n();
+
 import { reactive } from 'vue';
 import { useVueNiceValidate } from 'vue-nice-validate';
 const { vValidate, formErrors, validateForm, validationFields } = useVueNiceValidate();
@@ -107,7 +126,6 @@ let data = reactive({
 });
 
 function onSubmit() {
-
 	validateForm(data).then(result => {
 		console.log(validationFields);
 
@@ -117,5 +135,9 @@ function onSubmit() {
 			console.log('Its not valid');
 		}
 	});
+}
+
+function currentTab(lang){
+	locale.value = lang;
 }
 </script> 
