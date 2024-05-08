@@ -13,7 +13,7 @@
 </p>
 
 # Vue Nice Validate
-VueNIceValidate is the light weight validation package. This package allows developers to full fill their basic requirements for form validation without heavy templating, heavy computaion and much code. You can validate single input, multiple inputs, single form or third party component with ease. You can easily access and modify field errors, rules and messages. 
+VueNiceValidate is a lightweight directive + data based validation package.  It is created for Vue3 with help of composable functions. This package allows developers to full fill their basic requirements for form validation without heavy templating, heavy computaion and much code. You can validate single input, multiple inputs, single form or third party component with ease. You can easily access and modify field errors, rules and messages. 
 
 **Here are some usefull links**
 1. [Documentation](https://vue-nice-validate.netlify.app/) 

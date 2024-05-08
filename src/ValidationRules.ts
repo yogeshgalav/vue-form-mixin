@@ -4,7 +4,15 @@ function getExtension(filename:string) {
 	const parts = filename.split('.');
 	return parts[parts.length - 1];
 }
-
+function getFieldValue(field_id:string){
+	const field = document.getElementById(field_id);
+	if (!field) {
+		/* eslint-disable-next-line */
+			console.error('Input field with id #' + field_id + ' not found.');
+		return false;
+	}
+	return (field as HTMLInputElement).value;
+}
 const validationRules: TValidationRules = {
 	required(value) {
 		if (value && value.toString().trim()) return true;
@@ -92,13 +100,7 @@ const validationRules: TValidationRules = {
 		}
 	},
 	confirmed(val, confirmation_field) {
-		const field = document.getElementById(confirmation_field);
-		if (!field) {
-			/* eslint-disable-next-line */
-			console.error('Input field with id #' + confirmation_field + ' not found.');
-			return false;
-		}
-		const confirmed_value = (field as HTMLInputElement).value;
+		const confirmed_value = getFieldValue(confirmation_field);
 
 		if (confirmed_value === val) {
 			return true;
