@@ -6,7 +6,7 @@ outline: deep
 After generating error messages, they are stored in an formErrors array which simplifies displaying errors in your UI.
 
 You can import "formErrors" from useVueNiceValidate() composable function.
-```js-vue
+```vue
 const { formErrors } = useVueNiceValidate();
 ```
 
@@ -30,7 +30,7 @@ Another use-case is that you might want to display all the errors for an input, 
 
 ## Displaying all errors
 Sometimes you need to display all fields errors on top of a form, especially for very large forms. In that case you can directly use validationFields property containing all fields data including "error_msgs". validationFields is array of field object that contain all errors with respect to that field in "error_msgs". You can use either:
-```js-vue
+```vue
 const { validationFields } = useVueNiceValidate();
 ```
 
@@ -62,7 +62,7 @@ You can use merge error_msgs for all fields into a single flat array and use it 
   <li v-for="field in validationFields">{{ error }}</li>
 </ul>
 ```
-```js-vue
+```vue
 const allErrors = computed(()=>
 	validationFields.reduce((acc,el) => 
 		acc.concat(Object.values(el.errors)),

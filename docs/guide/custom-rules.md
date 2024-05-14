@@ -7,7 +7,7 @@ You can easily add custom rules to VueNiceValidate, but your custom rules must h
 
 ## Adding a custom rule
 You can add one or more validation rule with help of "addValidationRules" function which accepts object containing validationRules.
-```js-vue
+```vue
 const { addValidationRules } = useVueNiceValidate();
 function customRuleFn(...) { ... }
 addValidationRules({customRuleFn})
@@ -16,7 +16,7 @@ addValidationRules({customRuleFn})
 ## Custom rule with no parameter
 If your custom rule doesn't require any parameter like "require" or if it use any external value or use other field value, then it will follow the given syntax
 As mentioned earlier the first parameter should always be value to be validated.
-```js-vue
+```vue
 function customRequire(value){
 	return value ? true : false;
 }
@@ -39,7 +39,7 @@ usage:
 
 ## Custom rule with one parameter
 If your custom rule require only one parameter like max or min, then it will follow the given syntax:
-```js-vue
+```vue
 function customMax(value, max){
 	return value>max ? true : false;
 }
@@ -54,7 +54,7 @@ usage:
 
 ## Custom rule with more then one parameter
 If your custom rule require more then one parameter like between, then you need to pass all the rule parameter inside object as the second parameter and it will be used as param1, param2 .. and so on. it will follow the given syntax:
-```js-vue
+```vue
 function customBetween(value, params){
 	return params.param1 < value < params.param2;
 }

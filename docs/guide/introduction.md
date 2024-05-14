@@ -9,7 +9,7 @@ If you stuck in any issue you can directly contact on our [discord group](https:
 
 If you wish to collaborate,
 Here's my blog of how I started this in first place:
-[How to create custom validator in Vue3?](https://dev.to/yogeshgalav7/validate-fields-in-vuejs-1ahn)
+[How to create custom validator in Vue3?](https://dev.to/yogeshgalav7/validate-fields-injs-1ahn)
 
 ## Features
 1. Data based validation

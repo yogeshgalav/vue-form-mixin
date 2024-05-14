@@ -6,7 +6,7 @@ outline: deep
 VueNiceValidate comes with generic error messages in english, which can be overwritten or internationalized according your requirement.
 
 You can use ValidatePlugin and use messageFormatter option while initiallising your vue app.
-```js-vue
+```vue
 import { ValidatePlugin } from 'vue-nice-validate';
 
 const messageFormatter = (rule, params)=>{
@@ -21,7 +21,7 @@ Similiarly you can use your custom message formatter also.
 
 ## Message parameters
 The message parameter provided as a second parameter in messageFormatter function is the object of following format.
-```js-vue
+```vue
 {
 	'fieldName':'',
 	'param1':'',
@@ -32,13 +32,13 @@ The message parameter provided as a second parameter in messageFormatter functio
 here param1, param2 etc are rule parameters. Depending upon rule there can be no parameters or any number.
 
 If you are using i18n then your key value pair may look like:
-```js-vue
+```vue
 'between'=>'The field with name {attribute} is not between {param1} and {param2}'
 ```
 
 ## Field-specific Custom Messages
 if you want to show some custom message for selected fields, then you can use addValidationMessage function which accepts the following format:
-```js-vue
+```vue
 addValidationMessage({
 	'fieldId':{'required':'selectRequired'}
 })

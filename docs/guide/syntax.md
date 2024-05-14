@@ -7,14 +7,14 @@ outline: deep
 The validation rules have a simple syntax similar to Laravel validation syntax.
 
 A validation expression is a string of a series of validators separated by a pipe | :
-```js-vue
+```vue
 const single = 'required'; // single rule.
 const multiple = 'required|numeric' // multiple rules.
 ```
 
 Rules expression can also be an object for complex and more readable rules:
 
-```js-vue
+```vue
 const single = { required: true }; // required field.
 
 const multiple = {
@@ -32,7 +32,7 @@ Some rules can have parameters, which can be specified in multiple ways for conv
 * An array containing the params values (Suitable for the object format).
 * An object (Provides more complex configuration for the rules in object format), but with a caveat.
 
-```js-vue
+```vue
 // Params as a string
 const someRule = 'included:1,2,3,4';
 
